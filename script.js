@@ -1,22 +1,14 @@
-// login button functionality
-document.getElementById('loginButton').addEventListener('click', function (e) {
+document.getElementById('btn').addEventListener('click', function (e) {
   e.preventDefault();
-  const mobileNumber = 01976371680;
-  const pin = 1232;
-
-  const mobileNumberValue = document.getElementById('mobile-number').value;
-  const mobileNumberValueConverted = parseInt(mobileNumberValue);
-
-  const pinNumberValue = document.getElementById('pin-number').value;
-
-  const pinNumberValueConverted = parseInt(pinNumberValue);
-
-  if (
-    mobileNumberValueConverted === mobileNumber &&
-    pinNumberValueConverted === pin
-  ) {
+  let number =parseInt('12345678910');
+  let password = 1234;
+  let mbNum = parseInt(document.getElementById('mb-num').value);
+  let pin = parseInt(document.getElementById('pin').value);
+  if (number === mbNum && password === pin) {
     window.location.href = './home.html';
-  } else {
-    alert('Invalid Credentials!');
   }
-});
+  else {
+    alert('Invalid please try again')
+  }
+
+})
